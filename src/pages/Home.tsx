@@ -1,10 +1,10 @@
-import NavTop from "../layouts/NavTop";
+
 
 
 const Home = () => {
   return (
     <>
-    <NavTop />
+    
     </>
   )
 }
