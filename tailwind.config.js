@@ -13,6 +13,9 @@ export default {
       colors: {
         red: '#FF4C60',
       },
+      backgroundImage: {
+        BannerImage1: "url('./src/assets/banner1.png')"
+      }
     },
   },
   plugins: [],
