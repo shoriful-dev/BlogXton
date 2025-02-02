@@ -3,3 +3,50 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.cursor-controlled-slider {
+  cursor: none;
+}
+
+.cursor-controlled-slider .slick-list {
+  overflow: visible;
+}
+
+.cursor-controlled-slider .slick-slide {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.5;
+}
+
+.cursor-controlled-slider .slick-slide.slick-active {
+  opacity: 1;
+}
+
+.cursor-controlled-slider .slick-slide.slick-active:hover {
+  transform: scale(1.05);
+}
+
+.cursor-controlled-slider::after {
+  content: "";
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+.cursor-controlled-slider::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, rgba(255, 0, 0, 0.2) 0%, rgba(0, 255, 0, 0.2) 50%, rgba(0, 0, 255, 0.2) 100%);
+  pointer-events: none;
+  opacity: 0.1;
+  z-index: 9998;
+}
