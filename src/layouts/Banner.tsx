@@ -1,5 +1,5 @@
 import type React from 'react';
-import { useRef, useEffect, useState } from 'react';
+import { useRef } from 'react';
 import BannerCart from '../components/BannerCart';
 import RoundImage1 from '../assets/round1.png';
 import RoundImage2 from '../assets/round2.png';
@@ -21,6 +21,8 @@ import 'slick-carousel/slick/slick.css';
 import Slider from 'react-slick';
 import { Link } from 'react-router-dom';
 import '../index.css';
+import SampleNextArrow from '../components/SampleNextArrow';
+import SamplePrevArrow from '../components/SamplePrevArrow';
 
 const bannerData = [
   { roundImg: RoundImage1, bannerImg: BannerImage1, btnText: 'Interior' },
@@ -35,8 +37,6 @@ const bannerData = [
 
 const Banner: React.FC = () => {
   const sliderRef = useRef<Slider | null>(null);
-  const [currentSlide, setCurrentSlide] = useState(0);
-
   const settings = {
     className: 'cursor-controlled-slider',
     centerMode: true,
@@ -44,11 +44,12 @@ const Banner: React.FC = () => {
     centerPadding: '200px',
     slidesToShow: 3,
     speed: 1000,
-    autoplay: false,
+    autoplay: true,
     draggable: false,
     swipe: false,
     pauseOnHover: true,
-    beforeChange: (_: number, next: number) => setCurrentSlide(next),
+    nextArrow: <SampleNextArrow onClick={() => sliderRef.current?.slickNext()} />,
+    prevArrow: <SamplePrevArrow onClick={() => sliderRef.current?.slickPrev()} />,
     responsive: [
       {
         breakpoint: 1024,
@@ -66,33 +67,6 @@ const Banner: React.FC = () => {
       },
     ],
   };
-
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      if (sliderRef.current) {
-        const slider = sliderRef.current;
-        const viewportWidth = window.innerWidth;
-        const mouseX = e.clientX;
-        const centerX = viewportWidth / 2;
-        const distanceFromCenter = mouseX - centerX;
-        const threshold = viewportWidth / 4; // Adjust this value to change sensitivity
-
-        if (Math.abs(distanceFromCenter) > threshold) {
-          if (distanceFromCenter > 0 && currentSlide < bannerData.length - 1) {
-            slider.slickNext();
-          } else if (distanceFromCenter < 0 && currentSlide > 0) {
-            slider.slickPrev();
-          }
-        }
-      }
-    };
-
-    window.addEventListener('mousemove', handleMouseMove);
-
-    return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-    };
-  }, [currentSlide]);
 
   return (
     <div className="overflow-hidden">
