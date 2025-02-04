@@ -67,7 +67,7 @@ const Navber = () => {
                   Post
                 </NavLink>
                 <NavLink
-                  to="/feature"
+                  to="/blog"
                   className={({ isActive }) =>
                     `${
                       isActive
@@ -76,7 +76,7 @@ const Navber = () => {
                     }`
                   }
                 >
-                  Feature
+                  Blog
                 </NavLink>
                 <NavLink
                   to="/pages"

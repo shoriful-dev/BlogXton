@@ -9,7 +9,7 @@ interface SampleNextArrowProps {
 const SampleNextArrow: React.FC<SampleNextArrowProps> = ({className = '', onClick }) => {
   return (
     <div
-      className={`${className} text-2xl rounded-full w-12 h-12 border absolute right-16 top-[45%] flex items-center justify-center cursor-pointer bg-[#28B0A6] text-white active:scale-150 duration-500 z-10`}
+      className={`${className} text-2xl rounded-2xl w-12 h-12 border absolute right-16 top-[45%] flex items-center justify-center cursor-pointer bg-red text-white active:scale-150 duration-500 z-10`}
       onClick={onClick}
     >
       <FaChevronRight />
