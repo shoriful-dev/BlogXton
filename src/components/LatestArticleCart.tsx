@@ -20,7 +20,7 @@ const LatestArticleCart: React.FC<LatestArticleProps> = ({ imgSrc, btnText, titl
           <Image src={imgSrc} alt="" className='hover:scale-110 duration-300 transition-transform'/>
           <Badge
             btnText={btnText}
-            className="bg-white text-black absolute top-5 left-5 px-4"
+            className="bg-red absolute top-5 left-5 px-4"
           />
           <div className="w-[90%] mx-auto border mt-10 rounded-lg flex justify-between items-center px-3">
             <div className="flex items-center space-x-2">

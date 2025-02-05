@@ -94,7 +94,7 @@ const LatestArticle: React.FC = () => {
               </div>
             </div>
             <Link to={'/post'}>
-              <div className="">
+              <div>
                 <LatestArticleCart
                   imgSrc={LatestImage2}
                   btnText="Travel"

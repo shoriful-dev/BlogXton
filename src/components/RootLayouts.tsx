@@ -1,4 +1,4 @@
-
+import Footer from '../layouts/Footer';
 import RootHeader from './RootHeader'
 import { Outlet } from 'react-router-dom'
 
@@ -7,6 +7,7 @@ const RootLayouts = () => {
     <div>
       <RootHeader/>
       <Outlet/>
+      <Footer />
     </div>
   )
 }

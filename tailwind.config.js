@@ -21,7 +21,8 @@ export default {
         BannerImage5: "url('./src/assets/banner5.png')",
         BannerImage6: "url('./src/assets/banner6.png')",
         BannerImage7: "url('./src/assets/banner7.png')",
-        BannerImage8: "url('./src/assets/banner8.png')"
+        BannerImage8: "url('./src/assets/banner8.png')",
+        FooterBG: "url('./src/assets/FooterBg.png')"
       }
     },
   },
