@@ -1,6 +1,7 @@
 import Banner from "../layouts/Banner";
 import EntireTopic from "../layouts/EntireTopic";
 import LatestArticle from "../layouts/LatestArticle";
+import Offer from "../layouts/Offer";
 
 
 
@@ -10,6 +11,7 @@ const Home = () => {
     <Banner />
     <EntireTopic />
     <LatestArticle />
+    <Offer />
     </>
   )
 }
