@@ -21,8 +21,8 @@ const App: React.FC = () => {
           <Route path='/feature' element={<Blog/>} />
           <Route path='/pages' element={<Pages/>} />
           <Route path='/contact' element={<Contact/>} />
-          <Route path='*' element={<Error/>} />
         </Route>
+          <Route path='*' element={<Error/>} />
       </Routes>
     </Router>
   );
