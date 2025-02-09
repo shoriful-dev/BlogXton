@@ -20,9 +20,9 @@ const App: React.FC = () => {
           <Route path='/post' element={<Post/>} />
           <Route path='/blog' element={<Blog/>} />
           <Route path='/pages' element={<Pages/>} />
+          <Route path='*' element={<Error/>} />
           <Route path='/contact' element={<Contact/>} />
         </Route>
-          <Route path='*' element={<Error/>} />
       </Routes>
     </Router>
   );
