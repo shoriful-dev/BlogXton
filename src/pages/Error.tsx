@@ -5,7 +5,6 @@ import Image from "../components/Image";
 import ErrorImage from "../assets/pngwingcom.png";
 import { FaHome } from "react-icons/fa";
 
-
 const Error: React.FC = () => {
   return (
     <div className="bg-ErrorBG bg-[#fffaf0] h-[750px] py-">
