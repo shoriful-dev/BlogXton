@@ -14,7 +14,7 @@ const Error: React.FC = () => {
         </div>
         <h2 className="text-center font-Prompt text-lg text-gray-400">
           Sorry, The page you are looking for was removed, renamed or might
-          never existed
+          never existed pages.
         </h2>
         <div className="flex justify-center mt-20">
           <Link to={'/'}>
