@@ -1,9 +1,9 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Container from "../components/Container";
-import Image from "../components/Image";
-import ErrorImage from "../assets/pngwingcom.png";
-import { FaHome } from "react-icons/fa";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Container from '../components/Container';
+import Image from '../components/Image';
+import ErrorImage from '../assets/pngwingcom.png';
+import { FaHome } from 'react-icons/fa';
 
 const Error: React.FC = () => {
   return (
@@ -30,6 +30,6 @@ const Error: React.FC = () => {
       </Container>
     </div>
   );
-}
+};
 
 export default Error;
