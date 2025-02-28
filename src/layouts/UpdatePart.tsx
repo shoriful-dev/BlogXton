@@ -28,7 +28,7 @@ const UpdatePart: React.FC = () => {
             </div>
           </div>
           <div className="absolute top-[6px] right-5">
-            <Image src={ManImage}/>
+            <Image src={ManImage} />
           </div>
         </div>
       </Container>
