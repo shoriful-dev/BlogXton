@@ -48,8 +48,12 @@ const Banner: React.FC = () => {
     draggable: false,
     swipe: false,
     pauseOnHover: true,
-    nextArrow: <SampleNextArrow onClick={() => sliderRef.current?.slickNext()} />,
-    prevArrow: <SamplePrevArrow onClick={() => sliderRef.current?.slickPrev()} />,
+    nextArrow: (
+      <SampleNextArrow onClick={() => sliderRef.current?.slickNext()} />
+    ),
+    prevArrow: (
+      <SamplePrevArrow onClick={() => sliderRef.current?.slickPrev()} />
+    ),
     responsive: [
       {
         breakpoint: 1024,
