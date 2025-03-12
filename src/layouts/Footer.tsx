@@ -192,7 +192,7 @@ const Footer: React.FC = () => {
                 </nav>
               </div>
             </div>
-            <div className="text-center text-[13px] font-Prompt pt-12">
+            <div className="text-center text-[13px] font-Prompt pt-12 font-medium">
               © 2023 Blogxton Is Proudly Powered By
               <span className="text-red text-[13px] font-Prompt pl-2">
                 Egons Lab
